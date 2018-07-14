@@ -16,7 +16,8 @@ captureButton.addEventListener('click', () => {
       0, player.videoHeight - offset,
       player.videoWidth, 2,
       0, canvas.height - offset, canvas.width, 2);
-    setTimeout(() => thing(offset - 1), 1);
+    requestAnimationFrame(() => thing(offset - 1));
+    //setTimeout(() => thing(offset-1), 1);
   })(canvas.height);
 });
 
